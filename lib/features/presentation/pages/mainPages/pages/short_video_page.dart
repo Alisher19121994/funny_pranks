@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:funny_pranks/pages/mainPages/pages/shortsVideo/shorts_next_video.dart';
+import 'package:funny_pranks/features/presentation/pages/mainPages/pages/shortsVideo/shorts_next_video.dart';
 
-import '../../../contents/photos/photo.dart';
+import '../../../../../constants/photos/photo.dart';
+
 
 class ShortVideoPage extends StatefulWidget {
   const ShortVideoPage({super.key});

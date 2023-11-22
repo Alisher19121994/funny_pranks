@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../contents/photos/photo.dart';
+
+import '../../../../../constants/photos/photo.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

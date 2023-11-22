@@ -1,6 +1,6 @@
-import 'package:animated_react_button/animated_react_button.dart';
 import 'package:flutter/material.dart';
-import 'package:funny_pranks/contents/photos/photo.dart';
+
+import '../../../../../../constants/photos/photo.dart';
 
 class PranksNextPage extends StatefulWidget {
   const PranksNextPage({super.key});

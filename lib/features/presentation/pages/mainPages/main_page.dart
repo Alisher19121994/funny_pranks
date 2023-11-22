@@ -1,8 +1,8 @@
 import 'package:border_bottom_navigation_bar/border_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:funny_pranks/pages/mainPages/pages/short_video_page.dart';
-import 'package:funny_pranks/pages/mainPages/pages/home_page.dart';
-import 'package:funny_pranks/pages/mainPages/pages/pranks_page.dart';
+import 'package:funny_pranks/features/presentation/pages/mainPages/pages/home_page.dart';
+import 'package:funny_pranks/features/presentation/pages/mainPages/pages/pranks_page.dart';
+import 'package:funny_pranks/features/presentation/pages/mainPages/pages/short_video_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

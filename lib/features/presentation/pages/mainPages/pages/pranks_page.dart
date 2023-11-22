@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:funny_pranks/pages/mainPages/pages/pranks/pranks_next_page.dart';
+import 'package:funny_pranks/features/presentation/pages/mainPages/pages/pranks/pranks_next_page.dart';
 
-import '../../../contents/photos/photo.dart';
+import '../../../../../constants/photos/photo.dart';
+
 
 class PranksPage extends StatefulWidget {
   const PranksPage({super.key});

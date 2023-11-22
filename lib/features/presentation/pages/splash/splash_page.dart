@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../contents/photos/photo.dart';
 import '../mainPages/main_page.dart';
 
 class SplashPage extends StatefulWidget {
