@@ -1,6 +1,9 @@
-import 'package:border_bottom_navigation_bar/border_bottom_navigation_bar.dart';
+import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
+import 'package:funny_pranks/constants/photos/photo.dart';
+import 'package:funny_pranks/features/presentation/pages/mainPages/pages/fart_sounds_page.dart';
 import 'package:funny_pranks/features/presentation/pages/mainPages/pages/home_page.dart';
+import 'package:funny_pranks/features/presentation/pages/mainPages/pages/police_sounds_page.dart';
 import 'package:funny_pranks/features/presentation/pages/mainPages/pages/pranks_page.dart';
 import 'package:funny_pranks/features/presentation/pages/mainPages/pages/short_video_page.dart';
 
@@ -14,44 +17,104 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int _currentIndex = 0;
-
-  List pages = [
-    const HomePage(),
-    const PranksPage(),
-    const ShortVideoPage(),
-  ];
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: pages[_currentIndex],
-      bottomNavigationBar: BorderBottomNavigationBar(
-        height: 50,
-        currentIndex: _currentIndex,
-        borderRadiusValue: 25,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        selectedLabelColor: Colors.white,
-        unselectedLabelColor: Colors.grey,
-        selectedBackgroundColor: const Color(0xffC39DE2),
-        unselectedBackgroundColor: Colors.grey[200]!,
-        unselectedIconColor: const Color(0xffC39DE2),
-        selectedIconColor: Colors.white,
-        customBottomNavItems: [
-          BorderBottomNavigationItems(
-            icon: Icons.home,
+    return DefaultTabController(
+      length: 5,
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: const Color(0xffd0ff00),
+          centerTitle: true,
+          title: const Text('FUNNY',
+            style: TextStyle(color: Color(0xff2B0575),fontSize: 22.0,fontWeight:FontWeight.bold,fontFamily: 'DancingScript'),),
+          bottom: ButtonsTabBar(
+            backgroundColor: const Color(0xffd0ff00),
+            borderWidth: 1.9,
+            borderColor: const Color(0xffd0ff00),
+            labelStyle: const TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+            unselectedLabelStyle: const TextStyle(
+              color: Color(0xff2B0575),
+              fontWeight: FontWeight.normal,
+            ),
+            tabs:  [
+              Tab(
+                child:Container(
+                  width: 85,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(AppImages.pi),
+                        fit: BoxFit.fill
+                    )
+                  ),
+                )
+              ),
+              Tab(
+                  child:Container(
+                    width: 85,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(AppImages.unnamed2),
+                          fit: BoxFit.cover
+                        )
+                    ),
+                  )
+              ),
+              Tab(
+                  child:Container(
+                    width: 85,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(AppImages.images),
+                          fit: BoxFit.fill
+                        )
+                    ),
+                  )
+              ),
+              Tab(
+                  child:Container(
+                    width: 85,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(AppImages.icons),
+                          fit: BoxFit.cover
+                        )
+                    ),
+                  )
+              ),
+              Tab(
+                  child:Container(
+                    width: 85,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(AppImages.prank),
+                          fit: BoxFit.cover
+                        )
+                    ),
+                  )
+              ),
+            ],
           ),
-          BorderBottomNavigationItems(
-            icon: Icons.bar_chart,
-          ),
-          BorderBottomNavigationItems(
-            icon: Icons.video_collection_outlined,
-          ),
-        ],
+        ),
+        body:  const Column(
+          children: <Widget>[
+            Expanded(
+              child: TabBarView(
+                children: [
+                  HomePage(),
+                  PranksPage(),
+                  FartSounds(),
+                  PoliceSounds(),
+                  ShortVideoPage(),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

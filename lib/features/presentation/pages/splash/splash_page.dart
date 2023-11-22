@@ -20,14 +20,14 @@ class _SplashPageState extends State<SplashPage> {
             (route) => false));
 
     return Scaffold(
-      backgroundColor: const Color(0xffE6E6FA),
+      backgroundColor: const Color(0xffd0ff00),
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
-        child:  Center(
+        child:  const Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Text('Funny Prank',style: TextStyle(color: Color(0xff2B0575),fontSize: 50,fontFamily: 'DancingScript'),),
               Text('Sounds',style: TextStyle(color: Color(0xff2B0575),fontSize: 50,fontFamily: 'DancingScript'),),
             ],

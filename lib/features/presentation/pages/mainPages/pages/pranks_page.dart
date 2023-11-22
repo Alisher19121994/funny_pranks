@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:funny_pranks/features/presentation/pages/mainPages/pages/pranks/pranks_next_page.dart';
-
 import '../../../../../constants/photos/photo.dart';
 
 
@@ -17,11 +15,6 @@ class _PranksPageState extends State<PranksPage> {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       extendBody: true,
-      appBar: AppBar(
-        elevation: 0.0,
-        backgroundColor: const Color(0xffE6E6FA),
-        title: const Text('Hot-Sounds',style: TextStyle(color: Color(0xff2B0575),fontSize: 30,fontFamily: 'DancingScript'),),
-      ),
       body:SizedBox(
           height: size.height * 1,
           width: double.infinity,
@@ -46,14 +39,10 @@ class _PranksPageState extends State<PranksPage> {
   }
   Widget listOfPrank(){
     var size = MediaQuery.of(context).size;
-    return InkWell(
-      onTap: (){
-        Navigator.pushNamed(context, PranksNextPage.id);
-      },
-      child: Container(
-        margin: const EdgeInsets.only(top: 8.0,bottom: 10.0,right: 22.0,left: 22.0),
-        height: size.height * 0.2,
-        width: size.width * 0.4,
+    return Container(
+        margin: const EdgeInsets.only(top: 4.0,bottom: 8.0,right: 14.0,left: 14.0),
+        height: size.height * 0.13,
+        width: size.width * 0.45,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(24.0),
             image: DecorationImage(
@@ -74,7 +63,6 @@ class _PranksPageState extends State<PranksPage> {
                 child: Center(child: Text('Airhorn',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 32,fontFamily: 'DancingScript'),))),
           ],
         ),
-      ),
-    );
+      );
   }
 }

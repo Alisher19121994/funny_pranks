@@ -18,17 +18,6 @@ class _ShortVideoPageState extends State<ShortVideoPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         extendBody: true,
-        appBar: AppBar(
-          elevation: 0.0,
-          backgroundColor: const Color(0xffE6E6FA),
-          title: const Text(
-            'Prank Videos',
-            style: TextStyle(
-                color: Color(0xff2B0575),
-                fontSize: 30,
-                fontFamily: 'DancingScript'),
-          ),
-        ),
         body: ListView(
           children: [
             videoWidget(),

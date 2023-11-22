@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.alisherdaminov.funny_pranks.funny_pranks">
    <application
-        android:label="Funny Pranks"
+        android:label="Prank sounds"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher_round">
         <activity

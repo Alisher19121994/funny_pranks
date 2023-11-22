@@ -1,58 +1,57 @@
 import 'package:flutter/material.dart';
 import '../../../../../constants/photos/photo.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-  static const String id = 'HomePage';
+class FartSounds extends StatefulWidget {
+  const FartSounds({super.key});
+  static const String id = 'FartSounds';
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<FartSounds> createState() => _FartSoundsState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _FartSoundsState extends State<FartSounds> {
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    var height = MediaQuery.of(context).size.height;
     return Scaffold(
-      extendBody: true,
       body:Container(
           margin: const EdgeInsets.only(top: 3.0),
-        color: Colors.white,
-        height: size.height * 1,
-        width: double.infinity,
-        child:SingleChildScrollView(
-          child: Column(
-            children: [
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-              listOfPrank(),
-            ],
-          ),
-        )
-        ),
+          color: Colors.white,
+          height: height * 1,
+          width: double.infinity,
+          child:SingleChildScrollView(
+            child: Column(
+              children: [
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+                listOfFartSounds(),
+
+              ],
+            ),
+          )
+      ),
     );
   }
-
-  Widget listOfPrank(){
+  Widget listOfFartSounds(){
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Column(
@@ -62,7 +61,7 @@ class _HomePageState extends State<HomePage> {
           height: height * 0.048,
           width: width * 1,
           child: Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Row(
@@ -101,5 +100,4 @@ class _HomePageState extends State<HomePage> {
       ],
     );
   }
-
 }
